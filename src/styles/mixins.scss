@@ -1,0 +1,19 @@
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin flex-direction-justify-align($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin flex-direction-align($direction, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+@mixin flex-direction($direction) {
+  display: flex;
+  flex-direction: $direction;
+}

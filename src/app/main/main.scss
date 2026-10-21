@@ -1,0 +1,14 @@
+@use "../../styles/mixins.scss" as *;
+
+.main {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  @include flex-direction-align(column, center);
+}
+.main__container {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  max-width: 1280px;
+  @include flex-direction-justify-align(row, space-between, start);
+}

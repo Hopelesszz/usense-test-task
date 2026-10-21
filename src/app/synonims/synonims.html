@@ -1,0 +1,16 @@
+<div class="synonims_container">
+  <h3>Synonyms</h3>
+  <div class="synonyms-card__list">
+    @if(error()) {
+      <p style="color: red;">{{ error() }}</p>
+    }
+    @else {
+      @for (item of data(); track item) {
+        <div (click)="handleClick($event)">
+          {{ item }}
+        </div>
+      } @empty {
+      }
+    }
+  </div>
+</div>

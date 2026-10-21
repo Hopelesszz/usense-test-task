@@ -1,0 +1,6 @@
+@use "../styles/mixins.scss" as *;
+
+:host {
+ @include flex-direction(column);
+ gap: 20px;
+}

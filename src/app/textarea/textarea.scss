@@ -1,0 +1,55 @@
+@use "../../styles/mixins.scss" as *;
+
+:host {
+  display: block;
+  width: 68%;
+}
+.textarea_container {
+  box-sizing: border-box;
+  @include width-height(100%, 710px);
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  @include flex-direction-justify-align(column, space-between, center);
+  padding: 20px;
+
+  & textarea {
+    @include width-height(100%, 91%);
+    max-width: 100%;
+    max-height: 91%;
+    border: 1px solid rgb(221, 221, 221);
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #142B4D;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.textarea_container_header {
+  @include width-height(100%, 50px);
+  @include flex-direction-justify-align(row, space-between, center);
+
+  & button {
+    @include width-height(150px, 40px);
+    border-radius: 6px;
+    font-size: 17px;
+  }
+}
+.textarea_container_header_stats {
+  @include flex-direction-justify-align(row, space-between, center);
+  gap: 20px;
+}
+#get {
+  background-color: rgb(76, 76, 255);
+  border: none;
+  color: white;
+}
+#copy {
+  border: 1px solid rgb(221, 221, 221);
+}

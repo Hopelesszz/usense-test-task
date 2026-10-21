@@ -1,0 +1,61 @@
+@use "../../styles/mixins.scss" as *;
+
+:host {
+  display: block;
+  width: 30%;
+}
+.synonims_container {
+  box-sizing: border-box;
+  @include width-height(100%, 710px);
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  @include flex-direction-justify-align(column, start, center);
+  padding: 20px;
+  gap: 20px;
+
+  & h3 {
+    align-self: start;
+    font-size: 16px;
+    font-weight: 700;
+    color: #102544;
+    margin: 0;
+  }
+}
+.synonyms-card__list {
+  overflow-y: auto;
+  overflow-anchor: none;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding-right: 4px;
+  gap: 10px;
+
+  & div {
+    box-sizing: border-box;
+    @include width-height(100%, 45px);
+    min-height: 45px;
+    @include flex-direction-justify-align(row, space-between, center);
+    padding-left: 15px;
+    padding-right: 6px;
+    list-style-type: none;
+    width: 100%;
+    background-color: #F4F8FD;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & button {
+      background: none;
+      border: none;
+      font-size: 22px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}

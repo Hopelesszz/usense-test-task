@@ -1,0 +1,6 @@
+<main class="main">
+  <div class="main__container">
+    <app-textarea (eventSelect)="handleSelection($event)" (eventClick)="fetchSynonyms()" [synonym]="chosenSynonym()"></app-textarea>
+    <app-synonims (eventClick)="handleClick($event)" [error]="error()" [data]="synonyms()"></app-synonims>
+  </div>
+</main>

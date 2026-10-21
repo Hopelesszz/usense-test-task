@@ -1,0 +1,10 @@
+<div class="textarea_container">
+  <div class="textarea_container_header">
+    <button id="get" (click)="getSynonyms()">Get synonyms</button>
+    <div class="textarea_container_header_stats">
+      <span>Symbols: {{ symbolsCount()}}</span>
+      <span>Words: {{ wordsCount() }}</span>
+    </div>
+  </div>
+  <textarea [value]="text()" (input)="onInput($event)" (select)="textSelection($event)" id="textarea"></textarea>
+</div>
